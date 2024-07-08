@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Drink Order</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Order Drinks</h1>
+        <table>
+            <tr>
+                <td>
+                    <select id="drinkName">
+                        <option id="drinkA">DrinkA</option>
+                        <option id="drinkB">DrinkB</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="drink1" value="0">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <select id="drinkName">
+                        <option id="drinkA">DrinkA</option>
+                        <option id="drinkB">DrinkB</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="drink2" value="0">
+                </td>
+            </tr>
+        </table>
+        <button onclick="sendOrder()">Submit</button> 
+        <h2 id="result"></h2>  
+    </div>
+    
+
+    
+    <script>
+        async function sendOrder() {
+            const drinkA = document.getElementById('drink1').value;
+            const drinkB = document.getElementById('drink2').value;
+            
+            const response = await fetch('/calculate', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ drinkA: parseInt(drinkA), drinkB: parseInt(drinkB) }),
+            });
+
+            const result = await response.json();
+            document.getElementById('result').innerText = 'Total Price: ' + result.total;
+        }
+    </script>
+</body>
+</html>

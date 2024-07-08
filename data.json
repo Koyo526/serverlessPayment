@@ -1,0 +1,40 @@
+{
+    "94c07f6d-4905-4454-ac50-991cbbb5ed1a": [
+        {
+            "name": "FoodA",
+            "price": 100.0
+        },
+        {
+            "name": "FoodB",
+            "price": 200.0
+        }
+    ],
+    "9a6deaa3-35fa-4ae1-8267-a82779e496a3": [
+        {
+            "name": "DrinkA",
+            "price": 100.0
+        },
+        {
+            "name": "DrinkB",
+            "price": 120.0
+        },
+        {
+            "name": "DrinkC",
+            "price": 150.0
+        }
+    ],
+    "4931ad57-b2b2-4171-a3f5-6d44b876e2e3": [
+        {
+            "name": "\u30ab\u30d7\u30c1\u30fc\u30ce",
+            "price": 100.0
+        },
+        {
+            "name": "\u30ab\u30d5\u30a7\u30e9\u30c6",
+            "price": 120.0
+        },
+        {
+            "name": "\u30a8\u30b9\u30d7\u30ec\u30c3\u30bd",
+            "price": 70.0
+        }
+    ]
+}

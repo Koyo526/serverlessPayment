@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Register Item</title>
+</head>
+<body>
+    <h1>Register Item</h1>
+    <input type="button" value="商品を追加" onclick="addForm()">
+    <form action="{{ url_for('register') }}" method="post">
+        <div id="form_area">
+            <input type="hidden" id="numberOfForm" value="1" name="number">
+            <label for="name_0">Item Name:</label>
+            <input type="text" id="name_0" name="name_0" placeholder="商品名を入力してください" required>
+            <br>
+            <label for="price_0">Price:</label>
+            <input type="number" id="price_0" name="price_0" step="1" value="0" required>
+            <br>
+        </div>
+        
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>
+<script>
+    var i = 1 ;
+    function addForm() {
+        console.log("addFrom")
+        var numForm = document.getElementById('numberOfForm');
+        numValue = parseInt(numForm.value, 10);
+        numForm.value = numValue + 1;
+        var label_name = document.createElement('label');
+        label_name.htmlFor = 'name_' + i;
+        label_name.textContent = "Item Name:";
+        var input_name = document.createElement('input');
+        input_name.type = 'text';
+        input_name.id = 'name_' + i;
+        input_name.name = 'name_' + i;
+        input_name.placeholder = '商品名を入力してください';
+        input_name.setAttribute('required','');
+        var label_price = document.createElement('label');
+        label_price.htmlFor = 'price_' + i;
+        label_price.textContent = "Price:";
+        var input_price = document.createElement('input');
+        input_price.type = 'number';
+        input_price.id = 'price_' + i;
+        input_price.name = 'price_' + i;
+        input_price.value = 0;
+        input_price.step = 1;
+        input_price.setAttribute('required','');
+        var parent = document.getElementById('form_area');
+        parent.appendChild(label_name);
+        parent.appendChild(input_name);
+        parent.appendChild(document.createElement('br'));
+        parent.appendChild(label_price);
+        parent.appendChild(input_price);
+        parent.appendChild(document.createElement('br'));
+        i++ ;
+        console.log(numForm.value)
+    }
+</script>
