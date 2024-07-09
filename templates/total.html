@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
     <title>Total</title>
 </head>
 <body>
     <h1>Total Amount</h1>
     <p>The total amount is: ${{ total }}</p>
+    <a href="/payment" class="paypay">
+        <img width="200" src="./static/img/paypay_logo.jpg" alt="paypay">
+    </a>
 </body>
 </html>
