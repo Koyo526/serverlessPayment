@@ -2,9 +2,9 @@
 
 ## 使用技術
 <p style="display: inline">
-    <img src="https://img.shields.io/badge/-Python-3776AB.svg?logo=python&style=for-the-badge">
-    <img src="https://img.shields.io/badge/-flask-000000.svg?logo=python&style=for-the-badge">
-    <img src="https://img.shields.io/badge/-javascript-F7DF1E.svg?logo=python&style=for-the-badge">
+    <img src="https://img.shields.io/badge/-Python-F7DF1E.svg?logo=python&style=for-the-badge">
+    <img src="https://img.shields.io/badge/-flask-000000.svg?logo=flask&style=for-the-badge">
+    <img src="https://img.shields.io/badge/-javascript-3776AB.svg?logo=javascript&style=for-the-badge">
     <img src="https://img.shields.io/badge/-Amazon%20aws-232F3E.svg?logo=amazon-aws&style=for-the-badge">
     <img src="https://img.shields.io/badge/-AWS%20lambda-232F3E.svg?logo=aws-lambda&style=for-the-badge">
     <img src="https://img.shields.io/badge/-amazon%20S3-232F3E.svg?logo=amazon-s3&style=for-the-badge">
